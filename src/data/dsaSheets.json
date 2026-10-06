@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Striver A2Z Sheet",
+    "creator": "Striver (takeUforward)",
+    "description": "Complete A-Z DSA roadmap with step-by-step topics and video solutions.",
+    "link": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/"
+  },
+  {
+    "id": 2,
+    "title": "Striver SDE Sheet",
+    "creator": "Striver (takeUforward)",
+    "description": "Top 180+ interview problems asked in FAANG and top tech companies.",
+    "link": "https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/"
+  },
+  {
+    "id": 3,
+    "title": "Love Babbar 450",
+    "creator": "Love Babbar",
+    "description": "Curated list of 450 DSA questions to crack product-based companies.",
+    "link": "https://450dsa.com/"
+  },
+  {
+    "id": 4,
+    "title": "Blind 75",
+    "creator": "Community Curated",
+    "description": "The most famous 75 LeetCode problems covering all major patterns.",
+    "link": "https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions"
+  },
+  {
+    "id": 5,
+    "title": "NeetCode 150",
+    "creator": "NeetCode",
+    "description": "An expansion of Blind 75 with 150 structured questions across patterns.",
+    "link": "https://neetcode.io/practice"
+  },
+  {
+    "id": 6,
+    "title": "Apna College DSA Sheet",
+    "creator": "Apna College",
+    "description": "Exhaustive spreadsheet of selected questions for placements.",
+    "link": "https://docs.google.com/spreadsheets/d/1hXserPuxVoWMG9Hs7y8wVdRCJTcj3xMBAEYUOXQ5Xag/edit"
+  },
+  {
+    "id": 7,
+    "title": "Pepcoding DSA Sheet",
+    "creator": "Pepcoding",
+    "description": "Level-up foundation topics with targeted logical problems.",
+    "link": "https://www.pepcoding.com/resources/online-java-foundation"
+  },
+  {
+    "id": 8,
+    "title": "CodeHelp SDE Sheet",
+    "creator": "Love Babbar",
+    "description": "An exclusive Sheet designed by Love Babbar optimized for SDE interviews.",
+    "link": "https://www.codehelp.in/"
+  },
+  {
+    "id": 9,
+    "title": "Fraz DSA Sheet",
+    "creator": "Fraz",
+    "description": "A very popular and well-organized DSA sheet used by many to land FAANG jobs.",
+    "link": "https://www.youtube.com/watch?v=1s9D2aG9pE8"
+  },
+  {
+    "id": 10,
+    "title": "Arsh Goyal DSA Sheet",
+    "creator": "Arsh Goyal",
+    "description": "The Ultimate DSA Sheet by Arsh Goyal, covering essential and tricky questions.",
+    "link": "https://www.youtube.com/c/ArshGoyal"
+  }
+]

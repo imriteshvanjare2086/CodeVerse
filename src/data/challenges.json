@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "title": "Array Basics Quiz",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "description": "Test your understanding of arrays — indexing, traversal, and common operations.",
+    "questions": [
+      {
+        "q": "What is the time complexity of accessing an element by index in an array?",
+        "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+        "answer": 2
+      },
+      {
+        "q": "Which of the following is NOT a valid operation on a static array?",
+        "options": ["Access by index", "Insert at middle in O(1)", "Traverse all elements", "Swap two elements"],
+        "answer": 1
+      },
+      {
+        "q": "What does arr.length return in JavaScript for arr = [10, 20, 30]?",
+        "options": ["2", "3", "4", "undefined"],
+        "answer": 1
+      },
+      {
+        "q": "Which method removes the last element of an array in JavaScript?",
+        "options": ["shift()", "unshift()", "pop()", "splice()"],
+        "answer": 2
+      },
+      {
+        "q": "What is the output of [1,2,3].indexOf(2)?",
+        "options": ["0", "1", "2", "-1"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Time & Space Complexity Quiz",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "description": "Sharpen your Big-O intuition with 5 algorithmic complexity questions.",
+    "questions": [
+      {
+        "q": "What is the time complexity of Binary Search?",
+        "options": ["O(n)", "O(n log n)", "O(log n)", "O(1)"],
+        "answer": 2
+      },
+      {
+        "q": "Which sorting algorithm has the best average-case time complexity?",
+        "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+        "answer": 2
+      },
+      {
+        "q": "What is the space complexity of a recursive Fibonacci function (no memoization)?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(2^n)"],
+        "answer": 1
+      },
+      {
+        "q": "For a hash map lookup, the average-case time complexity is:",
+        "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+        "answer": 2
+      },
+      {
+        "q": "Which of these has O(n²) worst-case time complexity?",
+        "options": ["Merge Sort", "Heap Sort", "Quick Sort", "Binary Search"],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Linked List Concepts",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "description": "5 questions covering singly vs doubly linked lists, nodes, and traversal.",
+    "questions": [
+      {
+        "q": "In a singly linked list, each node contains:",
+        "options": ["Only data", "Data and two pointers", "Data and one pointer", "Only a pointer"],
+        "answer": 2
+      },
+      {
+        "q": "What is the time complexity of inserting at the head of a linked list?",
+        "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+        "answer": 2
+      },
+      {
+        "q": "Which of these structures allows O(1) access by index?",
+        "options": ["Linked List", "Array", "Both", "Neither"],
+        "answer": 1
+      },
+      {
+        "q": "To detect a cycle in a linked list, which algorithm is commonly used?",
+        "options": ["BFS", "Floyd's Cycle Detection", "DFS", "Binary Search"],
+        "answer": 1
+      },
+      {
+        "q": "In a doubly linked list, the head node's 'prev' pointer points to:",
+        "options": ["Tail node", "Second node", "Itself", "NULL"],
+        "answer": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Stack & Queue Quiz",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "description": "5 quick questions on stack and queue data structures and their operations.",
+    "questions": [
+      {
+        "q": "Which data structure follows the LIFO principle?",
+        "options": ["Queue", "Stack", "Heap", "Graph"],
+        "answer": 1
+      },
+      {
+        "q": "What does 'push' do in a stack?",
+        "options": ["Removes top element", "Adds element to top", "Views top element", "Clears the stack"],
+        "answer": 1
+      },
+      {
+        "q": "A Queue follows which principle?",
+        "options": ["LIFO", "LILO", "FIFO", "FILO"],
+        "answer": 2
+      },
+      {
+        "q": "Which operation removes from the front of a queue?",
+        "options": ["push", "pop", "enqueue", "dequeue"],
+        "answer": 3
+      },
+      {
+        "q": "A stack can be implemented using:",
+        "options": ["Only arrays", "Only linked lists", "Both arrays and linked lists", "Neither"],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "OOP Principles Quiz",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "description": "Test your knowledge of encapsulation, inheritance, polymorphism, and abstraction.",
+    "questions": [
+      {
+        "q": "Which OOP concept allows a class to inherit properties from another class?",
+        "options": ["Polymorphism", "Encapsulation", "Inheritance", "Abstraction"],
+        "answer": 2
+      },
+      {
+        "q": "Method overloading is an example of:",
+        "options": ["Compile-time polymorphism", "Runtime polymorphism", "Abstraction", "Encapsulation"],
+        "answer": 0
+      },
+      {
+        "q": "Which access modifier makes a member accessible only within the same class?",
+        "options": ["public", "protected", "private", "default"],
+        "answer": 2
+      },
+      {
+        "q": "An abstract class in Java:",
+        "options": ["Can be instantiated directly", "Cannot have any methods", "Can have both abstract and concrete methods", "Must extend another abstract class"],
+        "answer": 2
+      },
+      {
+        "q": "Which SOLID principle states a class should have only one reason to change?",
+        "options": ["Open/Closed", "Single Responsibility", "Liskov Substitution", "Interface Segregation"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Two Sum",
+    "type": "Coding",
+    "difficulty": "Easy",
+    "description": "Given an array of integers and a target, return indices of two numbers that add up to the target.",
+    "url": "https://leetcode.com/problems/two-sum/"
+  },
+  {
+    "id": 7,
+    "title": "Valid Parentheses",
+    "type": "Coding",
+    "difficulty": "Easy",
+    "description": "Determine if an input string of brackets is valid using a stack-based approach.",
+    "url": "https://leetcode.com/problems/valid-parentheses/"
+  },
+  {
+    "id": 8,
+    "title": "Longest Substring Without Repeating Characters",
+    "type": "Coding",
+    "difficulty": "Medium",
+    "description": "Use the sliding window technique to find the longest substring with unique characters.",
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+  },
+  {
+    "id": 9,
+    "title": "Merge Two Sorted Lists",
+    "type": "Coding",
+    "difficulty": "Easy",
+    "description": "Merge two sorted linked lists and return it as a new sorted list.",
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/"
+  },
+  {
+    "id": 10,
+    "title": "Maximum Subarray (Kadane's)",
+    "type": "Coding",
+    "difficulty": "Medium",
+    "description": "Apply Kadane's Algorithm to find the contiguous subarray with the largest sum.",
+    "url": "https://leetcode.com/problems/maximum-subarray/"
+  },
+  {
+    "id": 11,
+    "title": "Read About Database Indexing",
+    "type": "Task",
+    "difficulty": "Easy",
+    "description": "Read at least 2 articles on how B-Tree indexes speed up SQL queries. Take notes.",
+    "url": "#"
+  },
+  {
+    "id": 12,
+    "title": "Watch: System Design — URL Shortener",
+    "type": "Task",
+    "difficulty": "Medium",
+    "description": "Watch a system design video on building a URL shortener (TinyURL). Note the key components.",
+    "url": "https://www.youtube.com/results?search_query=url+shortener+system+design"
+  },
+  {
+    "id": 13,
+    "title": "Revise Git Branching Strategy",
+    "type": "Task",
+    "difficulty": "Easy",
+    "description": "Review Git Flow and Trunk-Based development. Understand when to use feature branches.",
+    "url": "#"
+  }
+]

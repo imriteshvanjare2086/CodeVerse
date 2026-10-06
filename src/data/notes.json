@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "title": "Python Programming Notes",
+    "category": "Programming Languages",
+    "subCategory": "Python",
+    "type": "Handwritten",
+    "link": "https://www.codewithharry.com/notes/python/"
+  },
+  {
+    "id": 2,
+    "title": "C Language Full Notes",
+    "category": "Programming Languages",
+    "subCategory": "C",
+    "type": "Handwritten",
+    "link": "https://www.codewithharry.com/notes/c/"
+  },
+  {
+    "id": 3,
+    "title": "C++ Detailed Notes",
+    "category": "Programming Languages",
+    "subCategory": "C++",
+    "type": "Handwritten",
+    "link": "https://www.codewithharry.com/notes/cpp/"
+  },
+  {
+    "id": 4,
+    "title": "Java Object Oriented Concepts",
+    "category": "Programming Languages",
+    "subCategory": "Java",
+    "type": "Handwritten",
+    "link": "https://www.codewithharry.com/notes/java/"
+  },
+  {
+    "id": 5,
+    "title": "HTML Full Crash Course Guide",
+    "category": "Web Development",
+    "subCategory": "HTML",
+    "type": "Cheatsheet",
+    "link": "https://www.freecodecamp.org/news/html-crash-course/"
+  },
+  {
+    "id": 6,
+    "title": "CSS Flexbox & Grid Manual",
+    "category": "Web Development",
+    "subCategory": "CSS",
+    "type": "Documentation",
+    "link": "https://www.freecodecamp.org/news/css-flexbox-vs-css-grid/"
+  },
+  {
+    "id": 7,
+    "title": "Software Engineering JS Guide",
+    "category": "Web Development",
+    "subCategory": "JavaScript",
+    "type": "Notes",
+    "link": "https://www.techinterviewhandbook.org/software-engineering-interview-guide/"
+  },
+  {
+    "id": 8,
+    "title": "React Patterns & Best Practices",
+    "category": "Web Development",
+    "subCategory": "React",
+    "type": "Code Notes",
+    "link": "https://reactpatterns.com/"
+  },
+  {
+    "id": 9,
+    "title": "React Official Learn Guide",
+    "category": "Web Development",
+    "subCategory": "React",
+    "type": "Documentation",
+    "link": "https://react.dev/learn"
+  },
+  {
+    "id": 10,
+    "title": "Node.js Core Architecture",
+    "category": "Web Development",
+    "subCategory": "Node.js",
+    "type": "Documentation",
+    "link": "https://nodejs.org/en/learn"
+  },
+  {
+    "id": 11,
+    "title": "Love Babbar DSA Notes Repository",
+    "category": "Core CS",
+    "subCategory": "DSA",
+    "type": "Handwritten",
+    "link": "https://github.com/loveBabbar/CodeHelp-DSA-Busted-Series"
+  },
+  {
+    "id": 12,
+    "title": "Striver A2Z DSA Structured Notes",
+    "category": "Core CS",
+    "subCategory": "DSA",
+    "type": "Handwritten",
+    "link": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/"
+  },
+  {
+    "id": 13,
+    "title": "DBMS Complete Guide",
+    "category": "Core CS",
+    "subCategory": "DBMS",
+    "type": "Detailed Notes",
+    "link": "https://www.geeksforgeeks.org/dbms/"
+  },
+  {
+    "id": 14,
+    "title": "Operating Systems Internals",
+    "category": "Core CS",
+    "subCategory": "Operating Systems",
+    "type": "Notes",
+    "link": "https://www.geeksforgeeks.org/operating-systems/"
+  },
+  {
+    "id": 15,
+    "title": "Computer Networks Deep Dive",
+    "category": "Core CS",
+    "subCategory": "Computer Networks",
+    "type": "Notes",
+    "link": "https://www.geeksforgeeks.org/computer-network-tutorials/"
+  },
+  {
+    "id": 16,
+    "title": "The System Design Primer",
+    "category": "System Design",
+    "subCategory": "High Level Design",
+    "type": "Book / Notes",
+    "link": "https://github.com/donnemartin/system-design-primer"
+  },
+  {
+    "id": 17,
+    "title": "System Design 101 Notes",
+    "category": "System Design",
+    "subCategory": "High Level Design",
+    "type": "Visual Notes",
+    "link": "https://github.com/ByteByteCrash/system-design-101"
+  },
+  {
+    "id": 18,
+    "title": "DevOps Interactive Roadmap",
+    "category": "DevOps & Cloud",
+    "subCategory": "DevOps",
+    "type": "Roadmap",
+    "link": "https://roadmap.sh/devops"
+  },
+  {
+    "id": 19,
+    "title": "Docker Curriculum Notes",
+    "category": "DevOps & Cloud",
+    "subCategory": "Docker",
+    "type": "Tutorial Notes",
+    "link": "https://docker-curriculum.com/"
+  },
+  {
+    "id": 20,
+    "title": "Kubernetes Comic Guide",
+    "category": "DevOps & Cloud",
+    "subCategory": "Kubernetes",
+    "type": "Visual Notes",
+    "link": "https://cloud.google.com/kubernetes-engine/kubernetes-comic/"
+  },
+  {
+    "id": 21,
+    "title": "AWS Ramp-up Official Guides",
+    "category": "DevOps & Cloud",
+    "subCategory": "AWS",
+    "type": "Cheatsheet",
+    "link": "https://aws.amazon.com/training/ramp-up-guides/"
+  },
+  {
+    "id": 22,
+    "title": "Machine Learning Cheatsheet",
+    "category": "Data Science & AI",
+    "subCategory": "Machine Learning",
+    "type": "Cheatsheet",
+    "link": "https://ml-cheatsheet.readthedocs.io/"
+  },
+  {
+    "id": 23,
+    "title": "Deep Learning Official Book Notes",
+    "category": "Data Science & AI",
+    "subCategory": "Deep Learning",
+    "type": "Text Notes",
+    "link": "https://www.deeplearningbook.org/"
+  },
+  {
+    "id": 24,
+    "title": "SQL Quick Reference Tutorial",
+    "category": "Core CS",
+    "subCategory": "SQL",
+    "type": "Notes",
+    "link": "https://www.w3schools.com/sql/"
+  },
+  {
+    "id": 25,
+    "title": "C++ Primer Community Notes",
+    "category": "Programming Languages",
+    "subCategory": "C++",
+    "type": "Comprehensive",
+    "link": "https://github.com/pezy/CppPrimer"
+  },
+  {
+    "id": 26,
+    "title": "The Rust Programming Language Book",
+    "category": "Programming Languages",
+    "subCategory": "Rust",
+    "type": "Book / Notes",
+    "link": "https://doc.rust-lang.org/book/"
+  },
+  {
+    "id": 27,
+    "title": "A Tour of Go",
+    "category": "Programming Languages",
+    "subCategory": "Go",
+    "type": "Notes",
+    "link": "https://go.dev/tour/"
+  }
+]

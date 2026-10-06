@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        const theme = savedTheme ? savedTheme : "light";
+        const root = document.documentElement;
+
+        // Ensure only one theme class exists
+        root.classList.remove("light", "dark");
+        root.classList.add(theme);
+
+        // Prevent background flash immediately
+        if (theme === "dark") {
+          root.style.backgroundColor = "#000000";
+        } else {
+          root.style.backgroundColor = "#F8FAFC";
+        }
+      } catch (e) { }
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: Set the document title to the name of your application -->
+  <title>CodeTrack</title>
+  <meta name="description" content="CodeTrack - Track your coding journey" />
+  <meta name="author" content="CodeTrack" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta property="og:title" content="CodeTrack" />
+  <meta property="og:description" content="Track your coding journey with CodeTrack" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@CodeTrack" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
