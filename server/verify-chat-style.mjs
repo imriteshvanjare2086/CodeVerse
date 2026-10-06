@@ -19,3 +19,14 @@ assert.match(code.trim(), /^```python\s*\n[\s\S]+\n```$/, 'Code reply should be 
 assert.equal((code.match(/```/g) || []).length, 2);
 console.log('Code-only follow-up:', code);
 console.log('PASS: real Gemma approach-first and contextual code-only follow-up');
+const direct = await chat('Give me code to find the second largest distinct number in a list.');
+assert.match(direct.trim(), /^```python\s*\n[\s\S]+\n```$/, 'Missing language should default to Python without clarification');
+console.log('PASS: direct code request without language or input-format questions');
+const followup = await chat('now in Java', [{ role: 'user', content: question }, { role: 'assistant', content: code }]);
+assert.match(followup.trim(), /^```java\s*\n[\s\S]+\n```$/, 'Language follow-up should use the existing problem');
+console.log('PASS: language-change follow-up reuses the problem without clarification');
+const cpp = await chat('Give C++ code to return the sum of the integers in a vector.');
+assert.match(cpp.trim(), /^```(?:cpp|c\+\+)\s*\n[\s\S]+\n```$/);
+assert.ok(cpp.includes('using namespace std;'));
+assert.ok(!cpp.includes('std::'));
+console.log('PASS: clean C++ code uses using namespace std without std:: prefixes');
