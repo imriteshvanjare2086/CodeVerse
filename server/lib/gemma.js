@@ -1,5 +1,6 @@
 // Official REST interface: https://ai.google.dev/gemma/docs/core/gemma_on_gemini_api
 import { readSSE } from './sse.js';
+import { providerFetch } from './providerFetch.js';
 const supportedModels = new Set(['gemma-4-26b-a4b-it', 'gemma-4-31b-it']);
 
 export class AIError extends Error {
@@ -17,7 +18,7 @@ export async function generate(system, contents, { onChunk, signal } = {}) {
   const { model, key } = gemmaConfig();
   try {
     const method = onChunk ? 'streamGenerateContent?alt=sse' : 'generateContent';
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:${method}`, {
+    const response = await providerFetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:${method}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
       signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(45000)]) : AbortSignal.timeout(45000),
@@ -76,7 +77,7 @@ export async function chat(user, message, history = [], options = {}) {
   if (typeof message !== 'string' || !message.trim() || message.length > 12000 || !Array.isArray(history) || history.length > 20 || history.some(m => !m || !['user', 'assistant'].includes(m.role) || typeof m.content !== 'string' || m.content.length > 12000) || JSON.stringify(history).length > 60000) {
     throw new AIError('Enter a message up to 12,000 characters with at most 20 recent messages.', 400);
   }
-  return generate(`You are CodeT, CodeTrack's coding assistant. Help with DSA, algorithms, C++, Java, Python, JavaScript, debugging and interviews. Give the direct answer first. Be concise by default; expand when asked or needed for complete working code. Avoid repeating the question, greetings, and unrelated profile advice. ${grounding}\nProfile: ${JSON.stringify(userContext(user))}`, [
+  return generate(`You are CodeT, CodeTrack's coding assistant. Help with DSA, algorithms, C++, Java, Python, JavaScript, debugging and interviews. Response policy: For a programming problem, first explain the approach in concise plain language: the algorithm, key steps and relevant time/space complexity. Do not include implementation code or pseudocode unless the latest user message explicitly requests code or implementation. Merely mentioning code, pasting code for explanation, or asking how something works is not a request to generate code. If the latest user message explicitly asks for code (including a follow-up consisting of code, show code, or code in Python), use the conversation to identify the problem and requested language and output ONLY the implementation in a single fenced code block with its language tag. In code mode, output only the function or program requested. STOP immediately after its closing code fence. Omit ALL example invocations, sample inputs, print demonstrations, test cases and comments, including commented-out examples. No introduction, approach, explanation, complexity discussion or closing text. If essential problem context is missing, ask one brief clarifying question instead of inventing a problem. Non-programming questions can receive a concise normal answer. Avoid repeating the question, greetings, and unrelated profile advice. ${grounding}\nProfile: ${JSON.stringify(userContext(user))}`, [
     ...history.map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })),
     { role: 'user', parts: [{ text: message }] },
   ], options);

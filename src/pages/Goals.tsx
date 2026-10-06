@@ -29,7 +29,7 @@ export default function Goals() {
   const [goals, setGoals] = useState<Goal[]>([]);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const { data: dashboard, isLoading: isLoadingDashboard } = useDashboard();
-  const { data: recommendations = [], isLoading: isLoadingRecommendations, error: recommendationError, refetch: retryRecommendations, isFetching: isFetchingRecommendations } = useRecommendations(dashboard?.profile, activeTab === "recommendations");
+  const { data: recommendations = [], isLoading: isLoadingRecommendations, error: recommendationError, refetch: retryRecommendations, isFetching: isFetchingRecommendations } = useRecommendations(dashboard?.profile);
   const addedRecommendationIds = useMemo(
     () => new Set(goals.map((goal) => goal.id.split("-added-")[0])),
     [goals]
@@ -210,6 +210,8 @@ export default function Goals() {
                         <p className="mt-2 font-mono text-sm leading-relaxed text-muted-foreground">
                           Gemma 4 prioritizes your next milestones using your connected platform stats.
                         </p>
+                        {recommendations.length > 0 && isFetchingRecommendations && <p className="mt-2 text-sm text-muted-foreground">Showing saved recommendations while checking for updates...</p>}
+                        {recommendations.length > 0 && recommendationError && <p className="mt-2 text-sm text-muted-foreground">Showing saved recommendations. Refresh unavailable right now.</p>}
                       </div>
 
                       <div className="grid w-full grid-cols-2 gap-3 lg:max-w-md">

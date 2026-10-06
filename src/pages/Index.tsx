@@ -5,6 +5,7 @@ import { HeroStats } from "@/components/dashboard/HeroStats";
 import { PlatformCards } from "@/components/dashboard/PlatformCards";
 import { RatingGraph } from "@/components/dashboard/RatingGraph";
 import { useDashboard } from "@/hooks/useDashboard";
+import { useRecommendations } from "@/hooks/useRecommendations";
 import { useAchievements, getRecentAchievements } from "@/lib/achievements";
 import { PremiumBadge, BadgeDetailModal, BadgeGalleryModal } from "@/components/dashboard/PremiumBadge";
 
@@ -402,6 +403,8 @@ const Index = () => {
   const { userId } = useParams();
   const queryClient = useQueryClient();
   const { data: dash, isLoading, refetch } = useDashboard(userId);
+  // Begin inference on the user's dashboard so Goals can reuse the result.
+  useRecommendations(userId ? undefined : dash?.profile);
   const achievements = useAchievements(dash);
   const recent = getRecentAchievements(achievements, 3);
   const earned = achievements.filter((a) => a.earned);

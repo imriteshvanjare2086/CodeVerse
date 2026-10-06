@@ -9,47 +9,17 @@ import { ChatInput } from "@/components/codet/ChatInput";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface Message {
-  role: "user" | "assistant";
-  content: string;
-}
-
-interface ChatSession {
-  id: string;
-  title: string;
-  messages: Message[];
-  updatedAt: number;
-}
+import { useChatHistory, type Message, type ChatSession } from "@/hooks/useChatHistory";
 
 export default function CodeT() {
-  const [sessions, setSessions] = useState<ChatSession[]>([]);
-  const [activeSessionId, setActiveSessionId] = useState<string | null>(null);
+  const { sessions, setSessions, activeSessionId, setActiveSessionId, storageError } = useChatHistory();
+
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const requestRef = useRef<AbortController | null>(null);
   useEffect(() => () => requestRef.current?.abort(), []);
 
   const activeSession = sessions.find((s) => s.id === activeSessionId) || null;
-
-  // Load history
-  useEffect(() => {
-    const saved = localStorage.getItem("codecraft_chat_history");
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setSessions(parsed);
-        if (parsed.length > 0) setActiveSessionId(parsed[0].id);
-      } catch (e) {
-        console.error("Failed to parse history", e);
-      }
-    }
-  }, []);
-
-  // Save history
-  useEffect(() => {
-    if (isLoading) return;
-    localStorage.setItem("codecraft_chat_history", JSON.stringify(sessions));
-  }, [sessions, isLoading]);
 
   // Scroll to bottom
   useEffect(() => {
@@ -111,6 +81,7 @@ export default function CodeT() {
     requestRef.current = controller;
     let aiText = "", inserted = false;
     const updateReply = (text: string) => {
+      if (controller.signal.aborted) return;
       aiText += text;
       const append = !inserted;
       inserted = true;
@@ -142,7 +113,8 @@ export default function CodeT() {
         
         <div className="flex flex-1 overflow-hidden rounded-3xl border border-border/60 bg-card/40 backdrop-blur-xl shadow-2xl relative">
           
-          {/* Top Gradient Accent */}
+          {storageError && <p role="alert" className="absolute top-2 left-4 z-30 text-sm text-red-400">Chat history could not be saved. Check browser storage space.</p>}
+        {/* Top Gradient Accent */}
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-primary/50 z-20" />
 
           {/* Left Sidebar (History) */}
